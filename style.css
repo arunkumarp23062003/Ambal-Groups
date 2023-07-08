@@ -123,7 +123,6 @@ body {
 }
 
 .card {
-    width:100%;
     overflow: hidden;
 }
 
@@ -241,7 +240,7 @@ body {
 
 .footer {
     width:100%;
-    height:200px;
+    height:250px;
 }
 
 .list-group {
@@ -275,6 +274,24 @@ body {
     font-family: 'Fasthand', cursive;
     font-size: 2rem;
 }
+.footer {
+    background-color: #014314;
+}
+
+.footer__logo {
+    width:40px;
+    margin-top: 1em;
+}
+.footer__logo__image{
+    width:100%;
+}
+hr {
+    border:2px solid rgb(247, 247, 247) ;
+}
+.footer__copyright,.footer__contact1, .footer__contact2{
+    font-size: 15px;
+    color:rgb(159, 154, 154);
+}
 
 @media (min-width: 768px) {
     #nav-items {
@@ -284,17 +301,25 @@ body {
     .carousel-item {
         height: 300px;
     }
+    #card__container {
+        max-width: 100%;
+        margin:3px auto ;
+    }
     #carouselContent__text {
         font-size: 30px;
     }
     #card-text2 {
         margin-top: 2.8em;
     }
-    #card__buttons2 {
-        margin-top: 100px;
-    }
     .card-title {
-        font-size: 2.5em;
+        font-size: 1em;
+        font-weight: 800;
+        line-height: 1.5rem;
+    }
+    .author {
+        font-size: 18px;
+        font-weight: 800;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
     }
 }
 
@@ -311,7 +336,7 @@ body {
         font-size: 40px;
     }
     #card__container {
-        max-width: 80%;
+        max-width: 95%;
         margin:3px auto ;
     }
     .complex__container__logo{
@@ -319,7 +344,8 @@ body {
     }
     .card-title {
         margin-top: 0.8em;
-        font-size: 3em;
+        font-size: 1.5em;
+        line-height: normal;
     }
     #complex__cardbody__elements {
         margin-top: 3em;
