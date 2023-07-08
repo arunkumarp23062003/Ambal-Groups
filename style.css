@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Fasthand&family=Merriweather:wght@300;400;700;900&display=swap');
+
 * {
     font-family: 'Merriweather', serif;
 }
@@ -248,8 +250,8 @@ body {
 
 .list-group-item {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 400;
-    font-size: 1.2em;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
 
 .list-group-item:hover {
@@ -259,6 +261,19 @@ body {
 .list-group-item:hover {
     background-color: #9DC08B;
     transform: scale(1.1);
+}
+.modal-content {
+    background-color:#1A5D1A ;
+}
+
+.modal-content p {
+    text-align: justify;
+    background-color: #FBD85D;
+    color:#1A5D1A;
+    font-weight: 100;
+    padding: 1em;
+    font-family: 'Fasthand', cursive;
+    font-size: 2rem;
 }
 
 @media (min-width: 768px) {
