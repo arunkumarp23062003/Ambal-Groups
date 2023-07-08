@@ -44,13 +44,13 @@
           <a class="nav-link" href="#hero__container1" id="nav-items">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#card__container" id="nav-items">About Us</a>
+          <button type="button" class="nav-link border-0" id="nav-items" data-toggle="modal"
+            data-target=".bd-example-modal-lg" style="background-color: #2a581d;">About Us</button>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#" id="nav-items">Carrers</a>
         </li>
         <div class="dropdown">
-
           <!-- Dropdown button -->
           <button type="button" class="dropdown-toggle nav-dropdown pt-lg-2 ps-lg-2" id="nav-items"
             data-toggle="dropdown">
@@ -64,15 +64,26 @@
 
           <!-- Dropdown options -->
           <div class="dropdown-menu mt-lg-4">
-            <a class="dropdown-item" href="#card__container__element">Ambal Pharmacy(ponnamaravathi)</a>
-            <a class="dropdown-item" href="#card__container__element">Ambal Pharmacy(Kovaipudur)</a>
-            <a class="dropdown-item" href="#card__container__element">Ambal Pharmacy(ponnamaravathi)</a>
-            <a class="dropdown-item" href="#">Ambal Complex(Kovaipudur)</a>
+            <a class="dropdown-item" href="#card__container__element2">Ambal Pharmacy(ponnamaravathi)</a>
+            <a class="dropdown-item" href="#card__container__element1">Ambal Pharmacy(Kovaipudur)</a>
+            <a class="dropdown-item" href="#card__container__element3">Ambal Pharmacy(Arivozi Nagar)</a>
+            <a class="dropdown-item" href="#card__container__element__complex">Sri Ambal Towers(Kovaipudur)</a>
           </div>
         </div>
       </ul>
     </div>
   </nav>
+
+  <!--About us modal-->
+
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        ...
+      </div>
+    </div>
+  </div>
 
   <!-- main -->
   <section id="hero__container">
@@ -126,15 +137,21 @@
       </section>
     </section>
     <section id="card__container" class="d-md-flex gap-3">
-      <div class="card mt-0 mt-md-4 mt-lg-5" id="card__container__element">
+      <div class="card mt-0 mt-md-4 mt-lg-5" id="card__container__element1">
         <div class="inner">
           <img class="card-img-top" src="images/Medicalimage3.webp" alt="Card image cap" class="card__image1">
         </div>
         <img class="card-img-bottom" src="images/logo1.png">
         <div class="card-body text-center">
           <h5 class="card-title fs-4 fw-bold" id="card-title-medical">SRI AMBAL MEDICALS & STATIONERY</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
+          <p class="card-text ">
+            <ul class="list-group">
+              <li class="list-group-item">Medicines</li>
+              <li class="list-group-item">Stationeries</li>
+              <li class="list-group-item">E-Seva</li>
+              <li class="list-group-item">Mobile Accessories</li>
+            </ul>
+          </p>
           <!--card button1-->
           <div class="card-buttons">
             <a href="https://www.google.com/maps/place/SRI+AMBAL+MEDICALS+%26+STATIONERY/@10.9439342,76.9309044,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba85b930fceb417:0x3937b357c052e7a6!8m2!3d10.9439342!4d76.9334793!16s%2Fg%2F1tgf66nc?authuser=0&entry=ttu"
@@ -143,27 +160,37 @@
             </a>
             <!-- Button trigger modal -->
             <button type="button" class="btn border border-success rounded p-2" id="card-buttons-address"
-              data-toggle="modal" data-target="#exampleModal">
+              data-toggle="modal" data-target="#exampleModal1">
               <i class="fa-regular fa-address-book fa-xl" style="color: #16d908;"></i>
             </button>
+            <!-- phone -->
+            <a href="tel:+919894126144" class="btn border-primary p-2 ms-3" id="card-buttons-address">
+              <i class="fa-solid fa-phone-volume fa-xl" style="color: #1760de;"></i>
+            </a>
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content"
+                  style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 13, 0));">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title pharmacymodal-title" id="exampleModalLabel">SRI AMBAL MEDICALS & STATIONERY
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    ...
+                    <address class="address__text">
+                      MURUGAN COMPLEX,<br>
+                      KOVAIPUDUR,<br> 
+                      Coimbatore,<br> 
+                      Tamil Nadu 641042
+                    </address>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-dark border-success" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -172,17 +199,79 @@
 
         </div>
       </div>
-      <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element">
+      <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element2">
         <div class="inner">
           <img class="card-img-top" src="images/medicalimage5.jpg" alt="Card image cap" class="card__image1">
         </div>
         <img class="card-img-bottom" src="images/logo1.png">
         <div class="card-body  text-center">
           <h5 class="card-title fs-4 fw-bold" id="card-title-medical">SRI AMBAL MEDICALS</h5>
-          <p class="card-text" id="card-text2">Some quick example text to build on the card title and make up the bulk
-            of the card's
-            content.</p>
+          <p class="card-text" id="card-text2">
+            <ul class="list-group">
+              <li class="list-group-item">Medicines</li>
+              <li class="list-group-item">Mobile Recharge</li>
+            </ul>
+          </p>
           <!--button2-->
+          <div class="card-buttons" id="card__buttons2">
+            <a href="https://www.google.com/maps/place/Ambal+Medical/@10.2776271,78.5414605,17z/data=!3m1!4b1!4m6!3m5!1s0x3b0085b5091993b7:0xdb9766cb600d7862!8m2!3d10.2776271!4d78.5414605!16s%2Fg%2F11gh492bnn?authuser=0&entry=ttu"
+              target="_blank" class="btn border border-danger rounded p-2 me-3" id="card-buttons-location">
+              <i class="fa-sharp fa-solid fa-location-dot fa-xl" style="color: #dc1818;"></i>
+            </a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn border border-success rounded p-2" id="card-buttons-address"
+              data-toggle="modal" data-target="#exampleModal2">
+              <i class="fa-regular fa-address-book fa-xl" style="color: #16d908;"></i>
+            </button>
+            <!-- phone -->
+            <a href="tel:+919842650806" class="btn border-primary p-2 ms-3" id="card-buttons-address">
+              <i class="fa-solid fa-phone-volume fa-xl" style="color: #1760de;"></i>
+            </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content"
+                  style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 13, 0));">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Ambal Medicals & Stationery</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <address class="address__text">
+                      Arivozi Nagar,<br>
+                      Coimbatore,<br>
+                      Tamil Nadu 641105
+                    </address>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border-success" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element3">
+        <div class="inner">
+          <img class="card-img-top" src="images/medical Image1.avif" alt="Card image cap" class="card__image1">
+        </div>
+        <img class="card-img-bottom" src="images/logo1.png">
+        <div class="card-body text-center">
+          <h5 class="card-title fs-4 fw-bold" id="card-title-medical">New Ambal Medicals & Stationery</h5>
+          <p class="card-text">
+            <ul class="list-group">
+              <li class="list-group-item">Medicines</li>
+              <li class="list-group-item">Stationeries</li>
+              <li class="list-group-item">E-Seva</li>
+              <li class="list-group-item">Mobile Accessories</li>
+            </ul>
+          </p>
+          <!--button3-->
           <div class="card-buttons">
             <a href="https://www.google.com/maps/place/New+Ambal+Medicals+%26+Stationery/@10.929458,76.9274263,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba85ba2c323ab07:0x3252489a9a3a8af7!8m2!3d10.929458!4d76.9274263!16s%2Fg%2F11f5_fqpt1?authuser=0&entry=ttu"
               target="_blank" class="btn border border-danger rounded p-2 me-3" id="card-buttons-location">
@@ -190,72 +279,34 @@
             </a>
             <!-- Button trigger modal -->
             <button type="button" class="btn border border-success rounded p-2" id="card-buttons-address"
-              data-toggle="modal" data-target="#exampleModal">
+              data-toggle="modal" data-target="#exampleModal3">
               <i class="fa-regular fa-address-book fa-xl" style="color: #16d908;"></i>
             </button>
-
-
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-              aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    ...
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element">
-        <div class="inner">
-          <img class="card-img-top" src="images/medical Image1.avif" alt="Card image cap" class="card__image1">
-        </div>
-        <img class="card-img-bottom" src="images/logo1.png">
-        <div class="card-body text-center">
-          <h5 class="card-title fs-4 fw-bold" id="card-title-medical">New Ambal Medicals & Stationery</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-          <!--button3-->
-          <div class="card-buttons">
-            <a href="https://www.google.com/maps/place/Ambal+Medical/@10.2776271,78.5414605,17z/data=!3m1!4b1!4m6!3m5!1s0x3b0085b5091993b7:0xdb9766cb600d7862!8m2!3d10.2776271!4d78.5414605!16s%2Fg%2F11gh492bnn?authuser=0&entry=ttu"
-              target="_blank" class="btn border border-danger rounded p-2 me-3" id="card-buttons-location">
-              <i class="fa-sharp fa-solid fa-location-dot fa-xl" style="color: #dc1818;"></i>
+            <!-- phone -->
+            <a href="tel:+91917010189412" class="btn border-primary p-2 ms-3" id="card-buttons-address">
+              <i class="fa-solid fa-phone-volume fa-xl" style="color: #1760de;"></i>
             </a>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn border border-success rounded p-2" id="card-buttons-address"
-              data-toggle="modal" data-target="#exampleModal">
-              <i class="fa-regular fa-address-book fa-xl" style="color: #16d908;"></i>
-            </button>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
               aria-hidden="true">
               <div class="modal-dialog" role="document">
-                <div class="modal-content">
+                <div class="modal-content"
+                  style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 13, 0));">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">SRI AMBAL MEDICALS</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    ...
+                    <address class="address__text"> 
+                      Alagu Complex,<br>
+                      Ponnamaravathi West,<br>
+                      Tamil Nadu 622407
+                    </address>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-dark border-success" data-dismiss="modal">Close</button>
                   </div>
                 </div>
               </div>
@@ -267,59 +318,112 @@
 
     <!--complex-->
     <section class="complex__container">
-    <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element1">
-      <div class="carousel slide" id="complex__container__slider" data-ride="carousel">
-        <div class="carousel-inner" id="complex__container__carousel-inner">
-          <div class="carousel-item active complex__container__carousel-item" >
-            <div class="inner">
-              <img src="images/complex images/compleximage1.webp" alt="" class="d-block complex__container__carousel-image">
+      <div class="card mt-2 mt-md-4 mt-lg-5" id="card__container__element__complex">
+        <div class="carousel slide" id="complex__container__slider" data-ride="carousel">
+          <div class="carousel-inner" id="complex__container__carousel-inner">
+            <div class="carousel-item active complex__container__carousel-item">
+              <div class="inner1">
+                <img src="images/complex images/compleximage4.jpg" alt=""
+                  class="d-block complex__container__carousel-image">
+              </div>
+              <div class="carousel-caption complex__container__logo">
+                <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
+              </div>
             </div>
-            <div class="carousel-caption complex__container__logo">
-              <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
+            <div class="carousel-item complex__container__carousel-item">
+              <div class="inner1">
+                <img src="images/complex images/compleximage5.jpg" alt=""
+                  class="d-block complex__container__carousel-image">
+              </div>
+              <div class="carousel-caption  complex__container__logo">
+                <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
+              </div>
+            </div>
+            <div class="carousel-item complex__container__carousel-item">
+              <div class="inner1">
+                <img src="images/complex images/compleximage6.jpg" alt=""
+                  class="d-block complex__container__carousel-image">
+              </div>
+              <div class="carousel-caption complex__container__logo ">
+                <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
+              </div>
             </div>
           </div>
-          <div class="carousel-item complex__container__carousel-item">
-            <div class="inner">
-              <img src="images/complex images/compleximage1.webp" alt="" class="d-block complex__container__carousel-image">
-            </div>
-            <div class="carousel-caption  complex__container__logo">
-              <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
-            </div>
-          </div>
-          <div class="carousel-item complex__container__carousel-item">
-            <div class="inner">
-              <img src="images/complex images/compleximage1.webp" alt="" class="d-block complex__container__carousel-image">
-            </div>
-            <div class="carousel-caption complex__container__logo ">
-              <img src="images/logo1.png" class="complex__container__logoimage" alt="logo">
+          <a class="carousel-control-prev" href="#complex__container__slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#complex__container__slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold">SRI AMBAL TOWERS</h5>
+          <p class="card-text" id="complex__cardbody__elements">
+            <ul class="list-group" >
+              <li class="list-group-item">Medicines</li>
+              <li class="list-group-item">Stationeries</li>
+              <li class="list-group-item">E-Seva</li>
+              <li class="list-group-item">Mobile Accessories</li>
+            </ul>
+          </p>
+          <div class="card-buttons text-center">
+            <a href="https://www.google.com/maps/place/SRI+AMBAL+Complex/@10.946805,76.93214,55m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3ba85b930fceb417:0x3937b357c052e7a6!2sSRI+AMBAL+MEDICALS+%26+STATIONERY!8m2!3d10.9439342!4d76.9334793!16s%2Fg%2F1tgf66nc!3m5!1s0x3ba85bee89415f7d:0x91a23815b6b703e4!8m2!3d10.9469745!4d76.9324237!16s%2Fg%2F11tt5hj8xv?authuser=0&entry=ttu"
+              target="_blank" class="btn border border-danger rounded p-2 p-md-3 me-3 me-md-4"
+              id="card-buttons-location">
+              <i class="fa-sharp fa-solid fa-location-dot fa-2xl" style="color: #dc1818;"></i>
+            </a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn border border-success rounded p-2 p-md-3" id="card-buttons-address"
+              data-toggle="modal" data-target="#exampleModal4">
+              <i class="fa-regular fa-address-book fa-2xl" style="color: #16d908;"></i>
+            </button>
+            <!-- phone -->
+            <a href="tel:+919842650506" class="btn border-primary p-2 p-md-3 ms-3 ms-md-4 " id="card-buttons-address">
+              <i class="fa-solid fa-phone-volume fa-2xl" style="color: #1760de;"></i>
+            </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content"
+                  style="background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 13, 0));">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SRI AMBAL TOWERS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <address class="address__text">
+                      S-160, BUSTerminus Road,<br>
+                      S - Block, Kovaipudur,<br>
+                      Tamil Nadu,<br>
+                      Coimbatore 641042.
+                  </address>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-dark border-success" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <a class="carousel-control-prev" href="#complex__container__slider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#complex__container__slider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon"  aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+    </section>
+    <section class="container-fluid footer bg-success border rounded-top">
+
     </section>
   </section>
-
   <script>
-
+         
     // Function to toggle the plus menu into minus
     function myFunction(x) {
-      x.classList.toggle("fa-minus-circle");
+        x.classList.toggle("fa-minus-circle");
     }
-  </script>
+</script>
 </body>
-
 </html>
